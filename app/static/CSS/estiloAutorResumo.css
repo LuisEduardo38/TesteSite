@@ -1,0 +1,67 @@
+#titulo{
+    background-color: #828E82;
+}
+#primeiroBloco{
+    background-color: #AAAE8E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+#primeiroBloco img{
+    max-width: 100px;
+    border-radius: 10px;
+}
+#segundoBloco{
+    background-color: #AAAE8E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#terceiroBloco{
+    background-color: #AAAE8E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#tituloResumo{
+    background-color: #828E82;
+}
+#resumo{
+    background-color: #AAAE8E;
+}
+#resumo p{
+    padding: 10px;
+}
+#besterTitulo{
+    background-color: #828E82;
+}
+#besterImg{
+    background-color: #AAAE8E;
+}
+#besterImg img{
+    max-width: 300px;
+    border-radius: 20px;
+}
+#besterTexto{
+    background-color: #828E82;
+}
+#besterTexto p{
+    padding: 10px;
+}
+#livrosAutor{
+    background-color: #AAAE8E;
+}
+#livros{
+    background-color: #828E82;
+}
+#livros p{
+    padding: 10px;
+}
+#footer{
+    background-color: #AAAE8E;
+}

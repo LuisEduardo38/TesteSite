@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloAutorResumo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeAutorResumo.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - {{ autorEscolhido.nome }}{% endblock %}
+
+{% block conteudo%}
+    <div id="titulo"><h2>Seção de Autor</h2></div>
+    <div id="primeiroBloco">
+        <img src="{{ autorEscolhido.imagem.url }}">
+    </div>
+    <div id="segundoBloco">
+        <p>Nome: {{ autorEscolhido.nome }}</p>
+        <p>Naturalidade: {{ autorEscolhido.naturalidade }}</p>
+        <p>Data de Nascimento: {{autorEscolhido.nascimento}}</p>
+    </div>
+    <div id="terceiroBloco">
+        <p>Publico Alvo: {{ autorEscolhido.publicoAlvo }}</p>
+        <p>Editora: {{ autorEscolhido.editora }}</p>
+    </div>
+    <div id="tituloResumo"><h2>Resumo sobre {{ autorEscolhido.nome }}</h2></div>
+    <div id="resumo">
+        <p>{{ autorEscolhido.resumo }}</p>
+    </div>
+    <div id="besterTitulo"><h2>BEST SELLER</h2></div>
+    <div id="besterImg">
+        <div><img src="{{ autorEscolhido.capaMaisLido02.url }}"></div>
+        <div><img src="{{ autorEscolhido.capaMaisLido01.url }}"></div>
+        <div><img src="{{ autorEscolhido.capaMaisLido03.url }}"></div>
+    </div>
+    <div id="besterTexto">
+        <p>{{ autorEscolhido.maisLido }}</p>
+    </div>
+    <div id="livrosAutor"><h2>Todos os Livors de Colleen Hoover</h2></div>
+    <div id="livros">
+        <p>{{ autorEscolhido.livros }}</p>
+    </div>
+{% endblock %}

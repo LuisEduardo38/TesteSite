@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloTabelaLivro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeLivro.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - Livros{%endblock%}
+
+{% block conteudo %}
+        <div id="secao">
+            <h2>Seção de Resenha</h2>
+        </div>
+        <div id="livro">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Capa</th>
+                        <th>Nome</th>
+                        <th>Autor</th>
+                        <th>Gênero</th>
+                        <th>Lançamento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in objetos %}
+                    <tr>
+                        <td><img src="{{ item.imagem.url }}" style="max-width: 100px"></td>
+                        <td>{{ item.nome }}</td>
+                        <td>{{ item.naturalidade }}</td>
+                        <td>{{ item.nascimento }}</td>
+                        <td>{{ item.publicoAlvo }}</td>
+                        <td>{{ item.editora }}</td>
+                        <td id="opcoes">
+                            <a href="{% url 'secaoEditar' tipo=tipo pk=item.id %}">Editar</a>
+                            <a href="{% url 'secaoUsuario' %}">Voltar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

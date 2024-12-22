@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}Milly's Literary Journey - {{ livroEscolhido.titulo }}{% endblock %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloVideo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeVideo.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+    <div id="titulo">
+        <h2>Seção de vídeos</h2>
+    </div>
+            <div id="primeiroBloco">
+                <img img src="{{ livroEscolhido.capa.url }}" style="max-width: 100px">
+                <p>Título:</br>{{ livroEscolhido.titulo }}</p>
+                <p>
+                    Gênero:</br>{% for genero in livroEscolhido.generoLivro.all %}
+                        {{ genero.descricao }},
+                        {% endfor %}
+                </p>
+            </div>
+            <div id="segundoBloco">
+                Autor(a): {{ livroEscolhido.autor.nome }}</br>
+                Lançamento: {{livroEscolhido.lancamento}}
+            </div>
+            <div id="avaliacao">
+                <h4>AVALIAÇÃO</h4>
+                {{ livroEscolhido.nota }} Estrelas
+            </div>
+            <div id="observacoes">
+                <h4>OBSERVAÇÕES SOBRE O LIVRO</h4>
+                {% for observacao in livroEscolhido.observacao.all %}
+                    {{ observacao.descricao }},
+                {% endfor %}
+            </div>
+            <div id="video">
+                <div>
+                    {% for videos  in livroEscolhido.videos.all %}
+                        {% if videos.pegaEmbarcaURL %}
+                        <h3>{{ videos.tituloVideo }}</h3>
+                        <iframe width="709" height="399" src="videos.pegaEmbarcaURL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        {% else %}
+                        <p>URL do vídeo inválida.</p>
+                        {% endif %}
+                    {% endfor %}     
+                </div>               
+            </div>
+{% endblock %}

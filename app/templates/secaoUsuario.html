@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloSecaoUsuario.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeSecaoUsuario.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - Seção de Usuario{% endblock %}
+
+{% block conteudo %}
+    <div id="titulo"><h2>Bem Vindo a Tela de Manipulação</h2></div>
+    <div id="menuCadastro">
+        <h5>MENU DE CADASTRO</h5>
+        <div>
+            <a href="{% url 'secaoCadastro' 'livro'%}">Cadastrar Livro</a>
+            <a href="{% url 'secaoCadastro' 'autor'%}">Cadastrar Autor</a>
+            <a href="{% url 'secaoCadastro' 'genero'%}">Cadastrar Gênero</a>
+            <a href="{% url 'secaoCadastro' 'observacao'%}">Cadastrar Observações</a>
+            <a href="{% url 'secaoCadastro' 'video'%}">Cadastrar Vídeo</a>
+        </div>
+    </div>
+    <div id="menuApagar">
+        <h5>MENU DE APAGAR</h5>
+        <div>
+            <a href="{% url 'listaObjetosApagar' 'livro' %}">Apagar Livro</a>
+            <a href="{% url 'listaObjetosApagarAutor' 'autor' %}">Apagar Autor</a>
+            <a href="{% url 'secaoGenerica02' 'genero' %}">Apagar Gênero</a>
+            <a href="{% url 'secaoGenerica02' 'observacoes' %}">Apagar Observações</a>
+            <a href="{% url 'secaoGenericaVideo02' 'video' %}">Apagar Vídeo</a>
+        </div>
+    </div>
+    <div id="menuEditar">
+        <h5>MENU DE EDITAR</h5>
+        <div>
+            <a href="{% url 'listaObjetos' 'livro' %}">Editar Livro</a>
+            <a href="{% url 'listaObjetosEditar' 'autor' %}">Editar Autor</a>
+            <a href="{% url 'secaoGenerica' 'genero' %}">Editar Gênero</a>
+            <a href="{% url 'secaoGenerica' 'observacoes' %}">Editar Observações</a>
+            <a href="{% url 'secaoGenericaVideo' 'video' %}">Editar Vídeo</a>
+        </div>
+    </div>
+{% endblock %}

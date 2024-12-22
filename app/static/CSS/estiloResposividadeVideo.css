@@ -1,0 +1,68 @@
+#header{
+    grid-area: header;
+}
+#header h1{
+    text-align: center;
+}
+#nav{
+    grid-area: nav;
+}
+#titulo{
+    grid-area: titulo;
+}
+#primeiroBloco{
+    grid-area: primeiroBloco;
+}
+#segundoBloco{
+    grid-area: segundoBloco;
+}
+#avaliacao{
+    grid-area: avaliacao;
+}
+#observacoes{
+    grid-area: observacoes;
+}
+#video{
+    grid-area: video;
+}
+#footer{
+    grid-area: footer;
+}
+@media (min-width: 700px){
+    #wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'primeiroBloco'
+        'segundoBloco'
+        'avaliacao'
+        'observacoes'
+        'video'
+        'footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 900px){
+    #wrapper{
+        grid-template-columns: 35% 65%;
+        grid-template-areas: 
+        'header header'
+        'nav nav'
+        'titulo titulo'
+        'primeiroBloco video'
+        'segundoBloco video'
+        'observacoes video'
+        'avaliacao video '
+        'footer footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

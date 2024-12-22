@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Milly's Literary Journey - {{ livroEscolhido.titulo }}{% endblock %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResenha.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeResenha.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+            <div id="primeiroBloco">
+                <img img src="{{ livroEscolhido.capa.url }}" style="max-width: 100px">
+                <p>Título:</br>{{ livroEscolhido.titulo }}</p>
+                <p>
+                    Gênero:</br>{% for genero in livroEscolhido.generoLivro.all %}
+                        {{ genero.descricao }},
+                        {% endfor %}
+                </p>
+            </div>
+            <div id="segundoBloco">
+                <p>
+                    Autor(a): {{ livroEscolhido.autor.nome }}</br>
+                    Lançamento: {{livroEscolhido.lancamento}}
+                </p>
+            </div>
+            <div id="avaliacao">
+                <h4>AVALIAÇÃO</h4>
+                {{ livroEscolhido.nota }} Estrelas
+            </div>
+            <div id="observacoes">
+                <h4>OBSERVAÇÕES SOBRE O LIVRO</h4>
+                {% for observacao in livroEscolhido.observacao.all %}
+                    {{ observacao.descricao }},
+                {% endfor %}
+            </div>
+            <div id="titulo"><h4>Resenha | {{ livroEscolhido.titulo }}, por Milly</h4></div>
+            <div id="resumo">
+                {{ livroEscolhido.resumo }}
+            </div>
+            <div id="introducao">
+                <p>{{ livroEscolhido.introducao }}</p>
+            </div>
+            <div id="primeiraIMG">
+                <div>
+                    <img src="{{ livroEscolhido.imagem01.url }}" alt="primeiraIMG">
+                </div>
+            </div>
+            <div id="desenvolvimento">
+                <p>{{ livroEscolhido.desenvolvimento }}</p>
+            </div>
+            <div id="segundaIMG">
+                <div>
+                    <img src="{{ livroEscolhido.imagem02.url }}" alt="segundaIMG">
+                </div>
+            </div>
+            <div id="conclusao">
+                <p>{{ livroEscolhido.conclusao }}</p>
+            </div>
+{% endblock %}

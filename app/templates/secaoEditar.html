@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloSecaoCadastro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeSecaoCadastro.css' %}">
+{% endblock %}
+
+{% block titulo %}{% endblock %}
+
+{% block conteudo %}
+    <div id="titulo"><h2>Bem Vindo a Tela de {{ titulo }}</h2></div>
+    <div id="formulario">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <label for="Titulo"><b>Título</b></label>
+                {{ form.as_p }}
+                <button type="submit">Salvar</button>
+                <a href="{% url 'listaObjetos' tipo %}">Voltar</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+#header{
+    grid-area: header;
+}
+#nav{
+    grid-area: nav;
+}
+#secao{
+    grid-area: secao;
+}
+#login{
+    grid-area: login;
+}
+#footer{
+    grid-area: footer;
+}
+@media (min-width: 700px){
+    #wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'secao'
+        'login'
+        'footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 900px){
+    #wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'secao'
+        'login'
+        'footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

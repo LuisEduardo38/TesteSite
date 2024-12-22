@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloTabelaLivro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeLivro.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - Livros{%endblock%}
+
+{% block conteudo %}
+        <div id="secao">
+            <h2>Seção de Resenha</h2>
+        </div>
+        <div id="livro">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Capa</th>
+                        <th>Nome</th>
+                        <th>Autor</th>
+                        <th>Gênero</th>
+                        <th>Lançamento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in livros %}
+                        <tr>
+                            <td><img src="{{ item.capa.url }}" style="max-width: 100px"></td>
+                            <td>{{ item.titulo }}</td>
+                            <td>{{ item.autor.nome }}</td>
+                            <td>
+                                {% for genero in item.generoLivro.all %}
+                                    {{ genero.descricao }},
+                                {% endfor %}
+                            </td>
+                            <td>{{ item.lancamento }}</td>
+                            <td id="opcoes">
+                                <a href="{% url 'resenha' id=item.id %}">Resenha</a>
+                                <a href="{% url 'videoLivro' id=item.id %}">Vídeo</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

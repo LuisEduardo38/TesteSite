@@ -1,0 +1,93 @@
+#header{
+    grid-area: header;
+}
+#header h1{
+    text-align: center;
+}
+#nav{
+    grid-area: nav;
+}
+#primeiroBloco{
+    grid-area: primeiroBloco;
+}
+#segundoBloco{
+    grid-area: segundoBloco;
+}
+#avaliacao{
+    grid-area: avaliacao;
+}
+#observacoes{
+    grid-area: observacoes;
+}
+#titulo{
+    grid-area: titulo;
+}
+#resumo{
+    grid-area: resumo;
+}
+#introducao{
+    grid-area: introducao;
+}
+#desenvolvimento{
+    grid-area: desenvolvimento;
+}
+#conclusao{
+    grid-area: conclusao;
+}
+#primeiraIMG{
+    grid-area: primeiraIMG;
+}
+#segundaIMG{
+    grid-area: segundaIMG;
+}
+#footer{
+    grid-area: footer;
+}
+@media (min-width: 700px){
+    #wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'primeiroBloco'
+        'segundoBloco'
+        'avaliacao'
+        'observacoes'
+        'titulo'
+        'resumo'
+        'introducao'
+        'primeiraIMG'
+        'desenvolvimento'
+        'segundaIMG'
+        'conclusao'
+        'footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 900px){
+    #wrapper{
+        grid-template-columns: 70% 30%;
+        grid-template-areas: 
+        'header header'
+        'nav nav'
+        'primeiroBloco segundoBloco'
+        'observacoes avaliacao'
+        'titulo titulo'
+        'resumo resumo'
+        'introducao introducao'
+        'primeiraIMG primeiraIMG'
+        'desenvolvimento desenvolvimento'
+        'segundaIMG segundaIMG'
+        'conclusao conclusao'
+        'footer footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

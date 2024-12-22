@@ -1,0 +1,18 @@
+#medias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #828E82;
+    padding: 10px;
+}
+#medias div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#medias img{
+    max-width: 150px;
+    max-height: 150px;
+}

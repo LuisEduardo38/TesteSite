@@ -1,0 +1,71 @@
+img{
+    max-width: 100px;
+}
+#header{
+    background-color: #AAAE8E;
+}
+#nav{
+    background-color: #828E82;
+}
+#nav li a:hover{
+    background: #AAAE8E;
+}
+#secao{
+    background-color: #AAAE8E;
+}
+#secao h2{
+    text-align: center;
+}
+#livro{
+    background-color: #AAAE8E;
+    justify-content: space-evenly;
+}
+#livro th{
+    background-color: #828E82;
+    padding: 10px;
+    text-align: center;
+}
+#livro td{
+    background-color: #AAAE8E;
+    padding: 5px;
+    text-align: center;
+}
+#livro td a{
+    text-decoration: none;
+    padding: 5px 5px; 
+    margin: 5px;
+    background: #3A606E;
+    border-radius: 10px;
+}
+#livro td a:hover{
+    background: #828E82;
+}
+#livro td img{
+    border-radius: 15px;
+}
+#menuPagina{
+    background-color: #AAAE8E;
+}
+#menuPagina ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#menuPagina li{
+    list-style: none;
+}
+#menuPagina a{
+    background-color: #828E82;
+    padding: 5px;
+    border-radius: 10px;
+    background: #3A606E;
+}
+#menuPagina a:hover{
+    background-color: #828E82;
+}
+#footer{
+    background-color: #828E82;
+}
+.desativarBotao{
+    pointer-events: none;
+}

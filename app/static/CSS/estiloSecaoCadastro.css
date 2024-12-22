@@ -1,0 +1,49 @@
+#titulo{
+    background-color: #828E82;
+}
+#formulario{
+    background-color: #AAAE8E;
+}
+#formulario label{
+    font-family: 'serifadas', Times, serif;
+}
+#formulario b{
+    color: black;
+}
+#formulario input{
+    color: black;
+    text-align: center;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 5px;
+    background: #3A606E;
+}
+#formulario div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#formulario button{
+    margin: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    background: #3A606E;
+}
+#formulario a{
+    padding: 5px 10px; 
+    margin: 10px;
+    text-decoration: none;
+    background: #3A606E;
+    border-radius: 10px;
+}
+#lado02 a:hover{
+    background: #828E82;
+    text-decoration: none;
+}
+#formulario button:hover{
+    background-color: #828E82;
+}
+#footer{
+    background-color: #828E82;
+}

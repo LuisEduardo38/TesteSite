@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloContato.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeHome.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - Contato{% endblock %}
+
+{% block conteudo %}
+            <div id="section">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'img/img01.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/img02.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/img03.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="medias">
+                <h2>Mídias sociais</h2>
+                    <div>
+                        <a href="#">
+                            <img src="{% static 'img/instagram.png' %}" class="midias" alt=""></br>
+                        </a>
+                        <a href="#">@milly.0vl</a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="{% static 'img/whats.png' %}" class="midias" alt=""></br>
+                        </a>
+                        <a href="#">(74) 9 XXXX-XXXX</a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="{% static 'img/gmail.png' %}" class="midias" alt=""></br>
+                            <a href="#">Millys@gmail.com</a>
+                        </a>
+                    </div>
+            </div>
+{% endblock %}

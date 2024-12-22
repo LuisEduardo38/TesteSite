@@ -1,0 +1,49 @@
+#header{
+    grid-area: header;
+}
+#header h1{
+    text-align: center;
+}
+#nav{
+    grid-area: nav;
+}
+#fotos{
+    grid-area: fotos;
+}
+#texto{
+    grid-area: texto;
+}
+#footer{
+    grid-area: footer;
+}
+@media (min-width: 700px){
+    #wrapper{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'fotos'
+        'texto'
+        'footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 900px){
+    #wrapper{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas: 
+        'header header'
+        'nav nav'
+        'fotos texto'
+        'footer footer';
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

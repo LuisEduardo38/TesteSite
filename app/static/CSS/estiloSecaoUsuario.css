@@ -1,0 +1,76 @@
+#titulo{
+    background-color: #828E82;
+}
+h5{
+    text-align: center;
+}
+a:hover{
+    background: #828E82;
+    text-decoration: none;
+}
+#menuCadastro{
+    background-color: #AAAE8E;
+    padding: 5%;
+}
+#menuCadastro a{
+    padding: 5px 10px; 
+    margin: 10px;
+    text-decoration: none;
+    background: #3A606E;
+    border-radius: 10px;
+}
+#menuCadastro a:hover{
+    background: #828E82;
+    text-decoration: none;
+} 
+#menuCadastro div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menuEditar{
+    background-color: #AAAE8E;
+    padding: 5%;
+}
+#menuEditar a{
+    padding: 5px 10px; 
+    margin: 10px;
+    text-decoration: none;
+    background: #3A606E;
+    border-radius: 10px;
+}
+#menuEditar a:hover{
+    background: #828E82;
+    text-decoration: none;
+}
+#menuEditar div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menuApagar{
+    background-color: #AAAE8E;
+    padding: 5%;
+}
+#menuApagar a{
+    padding: 5px 10px; 
+    margin: 10px;
+    text-decoration: none;
+    background: #3A606E;
+    border-radius: 10px;
+}
+#menuApagar a:hover{
+    background: #828E82;
+    text-decoration: none;
+}
+#menuApagar div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer{
+    background-color: #828E82;
+}

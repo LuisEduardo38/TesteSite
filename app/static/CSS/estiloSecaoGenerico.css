@@ -1,0 +1,34 @@
+#titulo{
+    background-color: #828E82;
+}
+#formulario{
+    background-color: #AAAE8E;
+}
+#formulario table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#formulario a{
+    padding: 5px 10px; 
+    margin: 10px;
+    text-decoration: none;
+    background: #3A606E;
+    border-radius: 10px;
+}
+#fomulario tbody tr td a:hover{
+    background-image: #828E82;
+}
+#formulario th{
+    padding: 10px;
+    text-align: center;
+}
+#formulario tbody{
+    background-color: #828E82;
+}
+#formulario td{
+    padding: 5px;
+    text-align: center;
+}
+#footer{
+    background-color: #AAAE8E;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLogin.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeLogin.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - Registrar{% endblock %}
+
+{% block conteudo %}
+    <div id="secao">
+        <h2>Seção de Registro</h2>
+    </div>
+    <div id="login">
+        <form method = "POST">
+            <div>
+                {% csrf_token %}
+                <label for="id_user"><b>Usuário</b></label>
+                {{ form.username }}
+                <label for = "id_password1"><b>Senha</b></label>
+                {{ form.password1 }}
+                <label for = "id_password2"><b>Confirma Senha</b></label>
+                {{ form.password2 }}
+            </div>
+            <div>
+                <a href="{% url 'login' %}">Voltar</a>
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block estilo %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloSecaoGenerico.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeSecaoCadastro.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - {{ titulo }}{% endblock %}
+
+{% block conteudo %}
+    <div id="titulo"><h2>Bem Vindo a Tela de {{ titulo }}</h2></div>
+    <div id="formulario">
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in objetos %}
+                <tr>
+                    <td>{{ item.tituloVideo }}</td>
+                    <td id="opcoes">
+                        <a href="{% url 'secaoEditar' tipo=tipo pk=item.id %}">Editar</a>
+                        <a href="{% url 'secaoUsuario' %}">Voltar</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td>Nenhum objeto encontrado.</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

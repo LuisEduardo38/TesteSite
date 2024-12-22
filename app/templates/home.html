@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block estilo %}
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloLink.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/estilo.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/estiloResposividadeHome.css' %}">
+{% endblock %}
+
+{% block titulo %}Milly's Literary Journey - teste de grid{%endblock%}
+
+{% block conteudo %}
+  <div id="fotos">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/img01.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/img02.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/img03.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="texto">
+    <p>
+      Camilly V. L. Jatobá é uma dedicada secretária que está começando uma nova jornada em sua carreira. Além de sua rotina organizada no trabalho, onde cuida da agenda e dos compromissos de seus superiores, ela está se aventurando como leitora e crítica literária. Sempre apaixonada por livros, decidiu compartilhar suas opiniões e análises sobre as obras que lê. Em suas resenhas, Camilly combina sua visão detalhista e capacidade analítica, características que desenvolveu em seu papel de secretária, com a paixão pelo universo literário. Agora, ela está entusiasmada em crescer nesse novo campo, fazendo suas primeiras reviews com entusiasmo e curiosidade.
+    </p>
+  </div>
+{% endblock %}
